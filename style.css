@@ -7,6 +7,15 @@
     --accent2:#8c6dff;
     --border:#f0d9ec;
   }
+  [data-theme="dark"]{
+    --bg:#1b1230;
+    --card:#241a3a;
+    --ink:#f4ecff;
+    --text-soft:#c9b8e0;
+    --accent:#ff6fb0;
+    --accent2:#c9aeff;
+    --border:#3a2a55;
+  }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{ scroll-behavior:smooth; }
   body{
@@ -14,6 +23,7 @@
     background:var(--bg);
     color:var(--ink);
     line-height:1.65;
+    transition:background .25s ease, color .25s ease;
   }
   header{
     position:sticky; top:0; background:var(--bg);
@@ -28,6 +38,14 @@
   nav ul{ display:flex; gap:20px; list-style:none; }
   nav a{ color:var(--ink); text-decoration:none; font-weight:600; font-size:14px; }
   nav a:hover{ color:var(--accent2); }
+  
+  .controls{ display:flex; gap:8px; }
+  .icon-btn{
+    width:36px; height:36px; border-radius:10px; border:2px solid var(--border);
+    background:var(--card); cursor:pointer; display:flex; align-items:center; justify-content:center;
+    font-size:15px;
+  }
+  .icon-btn.active{ border-color:var(--accent2); box-shadow:0 0 0 2px var(--accent2) inset; }
   
   section{ max-width:900px; margin:0 auto; padding:60px 24px; }
   .section-head{ margin-bottom:28px; }
