@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,34 +13,37 @@
   <div class="brand">AB.dev</div>
   <nav>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-en="About" data-de="Über mich">About</a></li>
+      <li><a href="#skills" data-en="Skills" data-de="Fähigkeiten">Skills</a></li>
+      <li><a href="#projects" data-en="Projects" data-de="Projekte">Projects</a></li>
+      <li><a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a></li>
+      <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
     </ul>
   </nav>
   <div class="controls">
+    <button class="icon-btn lang-btn" id="langToggle" aria-label="Switch to German" title="Switch to German">🇩🇪</button>
     <button class="icon-btn" id="lightToggle" aria-label="Light mode" title="Light mode">☀️</button>
     <button class="icon-btn" id="darkToggle" aria-label="Dark mode" title="Dark mode">🌙</button>
   </div>
 </header>
 
 <section class="hero" id="about">
-  <div class="eyebrow">OPEN TO WORK · MÜLHEIM AN DER RUHR, DE</div>
+  <div class="eyebrow" data-en="OPEN TO WORK · MÜLHEIM AN DER RUHR, DE" data-de="OFFEN FÜR ARBEIT · MÜLHEIM AN DER RUHR, DE">OPEN TO WORK · MÜLHEIM AN DER RUHR, DE</div>
   <h1>Anusha Bhat</h1>
-  <div class="role">Computer Engineer</div>
+  <div class="role" data-en="Computer Engineer" data-de="Informatikingenieurin">Computer Engineer</div>
   <div class="photo-frame">
     <img src="images/photo.jpg" alt="Anusha Bhat" onerror="this.parentElement.textContent='[ photo goes here ]'">
   </div>
-  <p>
+  <p data-en="I am a Computer Engineering student at the University of Duisburg-Essen, and I currently work as a working student at Siemens Energy, where I test software and help build AI agents that make everyday work a little easier for the teams around me. I like projects that make me learn something new — whether that's writing a ray tracer in C++ from scratch, building a mobile app in a weekend at a hackathon, or modelling network resilience for my thesis." data-de="Ich studiere Informatik an der Universität Duisburg-Essen und arbeite derzeit als Werkstudentin bei Siemens Energy, wo ich Software teste und KI-Agenten mitentwickle, die den Arbeitsalltag meiner Teams erleichtern. Ich mag Projekte, bei denen ich etwas Neues lerne, egal ob das bedeutet, einen Ray Tracer in C++ von Grund auf zu schreiben, an einem Hackathon-Wochenende eine App zu bauen, oder Netzwerkresilienz für meine Abschlussarbeit zu modellieren.">
     I am a Computer Engineering student at the University of Duisburg-Essen, and I currently work
     as a working student at Siemens Energy, where I test software and help build AI agents that
     make everyday work a little easier for the teams around me. I like projects that make me learn
-    something new.
+    something new — whether that's writing a ray tracer in C++ from scratch, building a mobile app
+    in a weekend at a hackathon, or modelling network resilience for my thesis.
   </p>
-  <p>
-    Outside of code, I paint when I have the time for it, play a bit of sport, and volunteer with international students here in Germany. I'm also major cat person (will soon be very apparent with my theme).
+  <p data-en="Outside of code, I paint when I have the patience for it, play a bit of sport to get out of my own head, and volunteer with international students here in Germany. Also: major cat person." data-de="Neben dem Programmieren male ich, wenn ich die Geduld dafür habe, treibe ein bisschen Sport, um abzuschalten, und engagiere mich für internationale Studierende hier in Deutschland. Außerdem: großer Katzenmensch.">
+    Outside of code, I paint when I have the patience for it, play a bit of sport to get out of my
+    own head, and volunteer with international students here in Germany. Also: major cat person.
   </p>
   <div class="chip-row">
     <span class="chip">🇮🇳 India → 🇦🇪 Dubai → 🇩🇪 Germany</span>
@@ -49,13 +51,13 @@
     <span class="chip">Deutschlandstipendium Scholar</span>
     <span class="chip">Cloud & Automation</span>
   </div>
-  <a class="btn" href="resume.pdf" download>Download resume</a>
+  <a class="btn" href="resume.pdf" download data-en="Download resume" data-de="Lebenslauf herunterladen">Download resume</a>
 </section>
 
 <section id="skills">
   <div class="section-head">
-    <div class="eyebrow">WHAT I WORK WITH</div>
-    <h2>Skills</h2>
+    <div class="eyebrow" data-en="WHAT I WORK WITH" data-de="WOMIT ICH ARBEITE">WHAT I WORK WITH</div>
+    <h2 data-en="Skills" data-de="Fähigkeiten">Skills</h2>
   </div>
   <div class="skills-grid">
     <div class="skill-card">Python</div>
@@ -75,91 +77,138 @@
 
 <section id="projects">
   <div class="section-head">
-    <div class="eyebrow">THINGS I'VE BUILT</div>
-    <h2>Projects</h2>
+    <div class="eyebrow" data-en="THINGS I'VE BUILT" data-de="WAS ICH GEBAUT HABE">THINGS I'VE BUILT</div>
+    <h2 data-en="Projects" data-de="Projekte">Projects</h2>
   </div>
   <div class="project-grid">
+
     <div class="project-card">
       <div class="project-thumb">
         <img src="images/projects/ray-tracer.jpg" alt="Realistic Ray Tracer Engine" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
       </div>
       <div class="project-body">
         <h3>Realistic Ray Tracer Engine</h3>
-        <p>Reflection, refraction, Phong lighting and global illumination, written in C++ with multithreading.</p>
+        <p data-en="Reflection, refraction, Phong lighting and global illumination, written in C++ with multithreading." data-de="Reflexion, Brechung, Phong-Beleuchtung und globale Beleuchtung, geschrieben in C++ mit Multithreading.">Reflection, refraction, Phong lighting and global illumination, written in C++ with multithreading.</p>
         <div class="tag-row"><span class="tag">C++</span><span class="tag">OOP</span><span class="tag">Multithreading</span></div>
       </div>
     </div>
+
     <div class="project-card">
       <div class="project-thumb">
         <img src="images/projects/hallohub.jpg" alt="HalloHub" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
       </div>
       <div class="project-body">
         <h3>HalloHub</h3>
-        <p>A hackathon-built mobile app that walks international students through visas, housing, and university paperwork.</p>
+        <p data-en="A hackathon-built mobile app that walks international students through visas, housing, and university paperwork." data-de="Eine auf einem Hackathon entwickelte App, die internationale Studierende durch Visum, Wohnungssuche und Uni-Papierkram führt.">A hackathon-built mobile app that walks international students through visas, housing, and university paperwork.</p>
         <div class="tag-row"><span class="tag">React Native</span><span class="tag">Expo</span></div>
       </div>
     </div>
+
     <div class="project-card">
       <div class="project-thumb">
         <img src="images/projects/face-recognition.jpg" alt="Face Recognition System" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
       </div>
       <div class="project-body">
         <h3>Face Recognition System</h3>
-        <p>Real-time face detection and recognition with a MySQL backend, reaching 90% accuracy on a controlled dataset.</p>
+        <p data-en="Real-time face detection and recognition with a MySQL backend, reaching 90% accuracy on a controlled dataset." data-de="Echtzeit-Gesichtserkennung mit MySQL-Backend, die auf einem kontrollierten Datensatz 90% Genauigkeit erreicht.">Real-time face detection and recognition with a MySQL backend, reaching 90% accuracy on a controlled dataset.</p>
         <div class="tag-row"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">MySQL</span></div>
       </div>
     </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="images/projects/financial-data-streamer.jpg" alt="Financial Data Streamer" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
+      </div>
+      <div class="project-body">
+        <h3>Financial Data Streamer</h3>
+        <p data-en="A JP Morgan Chase Forage simulation project: a live-updating financial data dashboard that streams and renders trading data in real time." data-de="Ein JP-Morgan-Chase-Forage-Simulationsprojekt: ein live aktualisiertes Finanzdaten-Dashboard, das Handelsdaten in Echtzeit streamt und darstellt.">A JP Morgan Chase Forage simulation project: a live-updating financial data dashboard that streams and renders trading data in real time.</p>
+        <div class="tag-row"><span class="tag">JavaScript</span><span class="tag">Data Viz</span></div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="images/projects/student-teacher-dashboard.jpg" alt="Student-Teacher Dashboard" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
+      </div>
+      <div class="project-body">
+        <h3>Student-Teacher Dashboard</h3>
+        <p data-en="A role-based dashboard system for schools, with separate views for students and teachers, secure logins, an attendance tracker, and a notifications module." data-de="Ein rollenbasiertes Dashboard-System für Schulen mit getrennten Ansichten für Schüler und Lehrer, sicheren Logins, Anwesenheitsverfolgung und Benachrichtigungsmodul.">A role-based dashboard system for schools, with separate views for students and teachers, secure logins, an attendance tracker, and a notifications module.</p>
+        <div class="tag-row"><span class="tag">Java</span><span class="tag">Authentication</span><span class="tag">GUI</span></div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="images/projects/inventory-management.jpg" alt="Inventory Management System" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
+      </div>
+      <div class="project-body">
+        <h3>Inventory Management System</h3>
+        <p data-en="A desktop inventory tool with search, live updates, and auto-generated reports." data-de="Ein Desktop-Inventartool mit Suche, Live-Updates und automatisch generierten Berichten.">A desktop inventory tool with search, live updates, and auto-generated reports.</p>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Tkinter</span></div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="images/projects/multipath-overlays.png" alt="Budgeted Multipath Overlays" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
+      </div>
+      <div class="project-body">
+        <h3>Budgeted Multipath Overlays</h3>
+        <p data-en="My bachelor thesis: a graph simulation framework that decides where to place backup network links so a backbone stays resilient even when nodes fail, without blowing the budget." data-de="Meine Bachelorarbeit: ein Graph-Simulationsframework, das entscheidet, wo Backup-Netzwerkverbindungen platziert werden, damit ein Backbone auch bei Knotenausfällen belastbar bleibt, ohne das Budget zu sprengen.">My bachelor thesis: a graph simulation framework that decides where to place backup network links so a backbone stays resilient even when nodes fail, without blowing the budget.</p>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag">NetworkX</span><span class="tag">Graph Theory</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <section id="experience">
   <div class="section-head">
-    <div class="eyebrow">WHERE I'VE WORKED</div>
-    <h2>Experience</h2>
+    <div class="eyebrow" data-en="WHERE I'VE WORKED" data-de="WO ICH GEARBEITET HABE">WHERE I'VE WORKED</div>
+    <h2 data-en="Experience" data-de="Erfahrung">Experience</h2>
   </div>
   <div class="timeline">
     <div class="tl-item">
-      <div class="tl-role">Working Student, Digitalization, QA & AI Automation</div>
+      <div class="tl-role" data-en="Working Student, Digitalization, QA & AI Automation" data-de="Werkstudentin, Digitalisierung, QA & KI-Automatisierung">Working Student, Digitalization, QA & AI Automation</div>
       <div class="tl-org">Siemens Energy AG</div>
-      <span class="tl-date">Jan 2026 — Present · Mülheim an der Ruhr</span>
-      <p class="tl-desc">Testing Salesforce Field Service workflows, validating enterprise reports, and building Agentforce AI agents that summarise work orders and track service milestones.</p>
+      <span class="tl-date" data-en="Jan 2026 — Present · Mülheim an der Ruhr" data-de="Jan 2026 — heute · Mülheim an der Ruhr">Jan 2026 — Present · Mülheim an der Ruhr</span>
+      <p class="tl-desc" data-en="Testing Salesforce Field Service workflows, validating enterprise reports, and building Agentforce AI agents that summarise work orders and track service milestones." data-de="Testen von Salesforce-Field-Service-Workflows, Prüfen von Unternehmensberichten und Entwicklung von Agentforce-KI-Agenten, die Arbeitsaufträge zusammenfassen und Servicemeilensteine verfolgen.">Testing Salesforce Field Service workflows, validating enterprise reports, and building Agentforce AI agents that summarise work orders and track service milestones.</p>
     </div>
     <div class="tl-item">
-      <div class="tl-role">Technical Intern, Digital Twin & 3D Measurement</div>
+      <div class="tl-role" data-en="Technical Intern, Digital Twin & 3D Measurement" data-de="Technische Praktikantin, Digital Twin & 3D-Messtechnik">Technical Intern, Digital Twin & 3D Measurement</div>
       <div class="tl-org">Siemens Energy AG</div>
-      <span class="tl-date">Sep 2025 — Dec 2025 · Mülheim an der Ruhr</span>
-      <p class="tl-desc">Supported digital twin workflows with PolyWorks and photogrammetry, ran 3D scanners and laser trackers, and automated parts of the measurement pipeline with Python.</p>
+      <span class="tl-date" data-en="Sep 2025 — Dec 2025 · Mülheim an der Ruhr" data-de="Sep 2025 — Dez 2025 · Mülheim an der Ruhr">Sep 2025 — Dec 2025 · Mülheim an der Ruhr</span>
+      <p class="tl-desc" data-en="Supported digital twin workflows with PolyWorks and photogrammetry, ran 3D scanners and laser trackers, and automated parts of the measurement pipeline with Python." data-de="Unterstützung von Digital-Twin-Workflows mit PolyWorks und Photogrammetrie, Bedienung von 3D-Scannern und Lasertrackern und Automatisierung von Teilen der Messpipeline mit Python.">Supported digital twin workflows with PolyWorks and photogrammetry, ran 3D scanners and laser trackers, and automated parts of the measurement pipeline with Python.</p>
     </div>
     <div class="tl-item">
-      <div class="tl-role">Student Intern, Web Development</div>
+      <div class="tl-role" data-en="Student Intern, Web Development" data-de="Praktikantin, Webentwicklung">Student Intern, Web Development</div>
       <div class="tl-org">Freshman Institute, FH Aachen</div>
-      <span class="tl-date">Oct 2022 — Dec 2022 · Aachen</span>
-      <p class="tl-desc">Built responsive pages with HTML, CSS, PHP, and JavaScript, plus backend scripting and functional testing.</p>
+      <span class="tl-date" data-en="Oct 2022 — Dec 2022 · Aachen" data-de="Okt 2022 — Dez 2022 · Aachen">Oct 2022 — Dec 2022 · Aachen</span>
+      <p class="tl-desc" data-en="Built responsive pages with HTML, CSS, PHP, and JavaScript, plus backend scripting and functional testing." data-de="Responsive Seiten mit HTML, CSS, PHP und JavaScript gebaut, dazu Backend-Skripting und funktionale Tests.">Built responsive pages with HTML, CSS, PHP, and JavaScript, plus backend scripting and functional testing.</p>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <div class="section-head">
-    <div class="eyebrow">SAY HELLO</div>
-    <h2>Get In Touch</h2>
+    <div class="eyebrow" data-en="SAY HELLO" data-de="SAG HALLO">SAY HELLO</div>
+    <h2 data-en="Get In Touch" data-de="Kontaktiere mich">Get In Touch</h2>
   </div>
-  <p style="color:var(--text-soft); margin-bottom:16px; max-width:60ch;">
+  <p style="color:var(--text-soft); margin-bottom:16px; max-width:60ch;" data-en="Whether you want to talk about a project, an opportunity, or just think we'd vibe, my inbox is open. Available from October 2026 and happy to relocate within Germany." data-de="Ob du über ein Projekt, eine Möglichkeit sprechen willst, oder einfach denkst, wir würden gut zusammenpassen, mein Postfach steht offen. Verfügbar ab Oktober 2026 und gerne umzugsbereit innerhalb Deutschlands.">
     Whether you want to talk about a project, an opportunity, or just think we'd vibe, my inbox is open.
     Available from October 2026 and happy to relocate within Germany.
   </p>
   <form action="https://formspree.io/f/maqgaqjp" method="POST">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="message" placeholder="Say something nice (or just say hi)" required></textarea>
-    <button class="btn" type="submit" style="border:none; cursor:pointer;">✉ Send Message</button>
+    <input type="text" name="name" id="nameInput" placeholder="Your name" required>
+    <input type="email" name="email" id="emailInput" placeholder="Your email" required>
+    <textarea name="message" id="messageInput" placeholder="Say something nice (or just say hi)" required></textarea>
+    <button class="btn" type="submit" style="border:none; cursor:pointer;" data-en="✉ Send Message" data-de="✉ Nachricht senden">✉ Send Message</button>
   </form>
 </section>
 
-<footer>Designed &amp; built by Anusha Bhat ✦ Mülheim an der Ruhr, Germany</footer>
+<footer data-en="Designed &amp; built by Anusha Bhat ✦ Mülheim an der Ruhr, Germany" data-de="Gestaltet &amp; entwickelt von Anusha Bhat ✦ Mülheim an der Ruhr, Deutschland">Designed &amp; built by Anusha Bhat ✦ Mülheim an der Ruhr, Germany</footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
 
