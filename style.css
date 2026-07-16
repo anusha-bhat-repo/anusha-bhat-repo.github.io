@@ -122,3 +122,49 @@ footer{ text-align:center; padding:30px; color:var(--text-soft); font-size:13px;
 .award-icon{ font-size:24px; line-height:1; }
 .award-title{ font-weight:700; font-size:15px; margin-bottom:4px; }
 .award-desc{ font-size:13px; color:var(--text-soft); }
+
+/* marquee ticker */
+.marquee-wrap{
+  background:var(--ink); border-top:3px solid var(--accent2); border-bottom:3px solid var(--accent2);
+  overflow:hidden; white-space:nowrap; padding:9px 0;
+}
+.marquee-track{
+  display:inline-block; padding-left:100%;
+  animation:marquee 24s linear infinite;
+  font-weight:700; font-size:13px; letter-spacing:1px; color:#8be6c9;
+}
+.marquee-track span{ color:#ffd166; margin:0 10px; }
+@keyframes marquee{ 0%{ transform:translateX(0);} 100%{ transform:translateX(-100%);} }
+
+/* Win98-style widget for stats */
+.win98-widget{
+  background:#d8d8e8; border:3px solid var(--ink); border-radius:6px;
+  overflow:hidden; font-family:monospace; width:100%; max-width:260px; flex-shrink:0;
+}
+[data-theme="dark"] .win98-widget{ background:#2a2140; }
+.win98-bar{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  background:linear-gradient(90deg, var(--accent2), var(--accent));
+  padding:6px 10px;
+}
+.win98-bar .win98-title{ font-size:10px; color:#fff; font-weight:700; letter-spacing:.5px; }
+.win98-bar .win98-btns{ display:flex; gap:4px; }
+.win98-bar .win98-btns span{
+  width:14px; height:14px; background:#e8e8e8; border:1px solid var(--ink);
+  font-size:9px; display:flex; align-items:center; justify-content:center;
+}
+.win98-widget-body{ padding:12px 14px; font-size:12px; color:var(--ink); }
+[data-theme="dark"] .win98-widget-body{ color:#f4ecff; }
+.win98-widget-body .wrow{ display:flex; justify-content:space-between; gap:10px; padding:5px 0; border-bottom:1px dashed rgba(0,0,0,.15); }
+[data-theme="dark"] .win98-widget-body .wrow{ border-bottom:1px dashed rgba(255,255,255,.15); }
+.win98-widget-body .wrow:last-child{ border-bottom:none; }
+.win98-widget-body .wval{ font-weight:700; color:var(--accent2); }
+[data-theme="dark"] .win98-widget-body .wval{ color:#ff9fce; }
+
+.about-row, .experience-row{ display:grid; grid-template-columns:1fr auto; gap:30px; align-items:start; }
+@media (max-width:800px){ .about-row, .experience-row{ grid-template-columns:1fr; } .win98-widget{ max-width:none; } }
+
+/* fun-fact strip */
+.fun-fact-row{ display:flex; flex-direction:column; align-items:center; gap:10px; padding:40px 24px; text-align:center; }
+.fun-fact-row .stars-line{ font-size:16px; letter-spacing:8px; color:var(--accent2); }
+.fun-fact-row p{ font-size:13px; color:var(--text-soft); max-width:44ch; }
