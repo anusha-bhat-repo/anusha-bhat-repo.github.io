@@ -1,3 +1,8 @@
+// curtain-up: hide the loader once everything's  ready
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('loader').classList.add('hide'), 500);
+});
+
 const root = document.documentElement;
 const lightToggle = document.getElementById('lightToggle');
 const darkToggle = document.getElementById('darkToggle');
@@ -42,7 +47,7 @@ langToggle.addEventListener('click', () => {
   setLanguage(lang === 'en' ? 'de' : 'en');
 });
 
-// --- ambient stars ---
+// --- stars ---
 (function(){
   const wrap = document.getElementById('starsBg');
   const n = 36;
@@ -60,7 +65,7 @@ langToggle.addEventListener('click', () => {
   }
 })();
 
-// --- hero name typing effect ---
+// --- hero name typing effect thingy ---
 function typeName(){
   const el = document.getElementById('heroName');
   const text = 'Anusha Bhat';
@@ -75,7 +80,7 @@ function typeName(){
 }
 window.addEventListener('load', () => setTimeout(typeName, 300));
 
-// --- subtle 3D tilt on the photo frame ---
+// ---  3D tilt on the photo ---
 (function(){
   const el = document.getElementById('photoFrame');
   el.addEventListener('mousemove', (e) => {
