@@ -13,7 +13,7 @@ darkToggle.addEventListener('click', () => applyTheme('dark'));
 
 applyTheme('light');
 
-// --- language toggle ---
+
 const langToggle = document.getElementById('langToggle');
 let lang = 'en';
 
@@ -41,3 +41,21 @@ function setLanguage(newLang){
 langToggle.addEventListener('click', () => {
   setLanguage(lang === 'en' ? 'de' : 'en');
 });
+
+
+(function(){
+  const wrap = document.getElementById('starsBg');
+  const n = 36;
+  for(let i=0;i<n;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = 2 + Math.random()*3;
+    s.style.width = size+'px';
+    s.style.height = size+'px';
+    s.style.left = (Math.random()*100)+'%';
+    s.style.top = (Math.random()*100)+'%';
+    s.style.animationDelay = (Math.random()*3.4)+'s';
+    s.style.animationDuration = (2.6 + Math.random()*2.2)+'s';
+    wrap.appendChild(s);
+  }
+})();
