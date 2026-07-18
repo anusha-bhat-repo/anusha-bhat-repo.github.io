@@ -1,4 +1,4 @@
-// curtain-up: hide the loader once everything's  ready
+// curtain-up: hide the loader once everything is ready
 window.addEventListener('load', () => {
   setTimeout(() => document.getElementById('loader').classList.add('hide'), 500);
 });
