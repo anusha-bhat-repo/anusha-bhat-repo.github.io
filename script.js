@@ -13,7 +13,7 @@ darkToggle.addEventListener('click', () => applyTheme('dark'));
 
 applyTheme('light');
 
-
+// --- language toggle ---
 const langToggle = document.getElementById('langToggle');
 let lang = 'en';
 
@@ -42,7 +42,7 @@ langToggle.addEventListener('click', () => {
   setLanguage(lang === 'en' ? 'de' : 'en');
 });
 
-
+// --- ambient stars ---
 (function(){
   const wrap = document.getElementById('starsBg');
   const n = 36;
@@ -58,4 +58,32 @@ langToggle.addEventListener('click', () => {
     s.style.animationDuration = (2.6 + Math.random()*2.2)+'s';
     wrap.appendChild(s);
   }
+})();
+
+// --- hero name typing effect ---
+function typeName(){
+  const el = document.getElementById('heroName');
+  const text = 'Anusha Bhat';
+  let i = 0;
+  el.textContent = '';
+  const iv = setInterval(() => {
+    el.textContent = text.slice(0, i + 1);
+    el.setAttribute('data-text', text.slice(0, i + 1));
+    i++;
+    if (i >= text.length) clearInterval(iv);
+  }, 85);
+}
+window.addEventListener('load', () => setTimeout(typeName, 300));
+
+// --- subtle 3D tilt on the photo frame ---
+(function(){
+  const el = document.getElementById('photoFrame');
+  el.addEventListener('mousemove', (e) => {
+    const r = el.getBoundingClientRect();
+    const x = e.clientX - r.left, y = e.clientY - r.top;
+    const rx = ((y / r.height) - 0.5) * -14;
+    const ry = ((x / r.width) - 0.5) * 14;
+    el.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) scale(1.03)`;
+  });
+  el.addEventListener('mouseleave', () => { el.style.transform = ''; });
 })();
