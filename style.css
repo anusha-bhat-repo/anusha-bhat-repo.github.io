@@ -204,6 +204,20 @@ footer{ text-align:center; padding:30px; color:var(--text-soft); font-size:13px;
   mix-blend-mode:multiply;
 }
 
+/* social dock, always there */
+.social-dock{
+  position:fixed; left:20px; bottom:20px; z-index:50;
+  display:flex; flex-direction:column; gap:10px;
+}
+.social-dock a{
+  width:38px; height:38px; border-radius:10px; border:2px solid var(--border);
+  background:var(--card); display:flex; align-items:center; justify-content:center;
+  transition:transform .15s ease, border-color .15s ease;
+}
+.social-dock a:hover{ transform:translateY(-3px); border-color:var(--accent2); }
+.social-dock svg{ width:18px; height:18px; fill:var(--ink); }
+@media (max-width:800px){ .social-dock{ left:14px; bottom:14px; } .social-dock a{ width:34px; height:34px; } }
+
 /* motion layer (might change later!!!) */
 .type-cursor{ color:var(--accent); animation:cursor-blink 1s steps(1) infinite; }
 @keyframes cursor-blink{ 50%{ opacity:0; } }
