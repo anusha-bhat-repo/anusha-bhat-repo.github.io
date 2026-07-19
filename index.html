@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anusha Bhat — Computer Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Anusha Bhat — Forward Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&family=Quicksand:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- cat loader  -->
-<div id="loader">
-  <div class="loader-box">
-    <div class="loader-spinner"></div>
-    <div class="loader-text">loading AB.dev<span class="type-cursor">_</span></div>
-  </div>
-</div>
+<div class="stars-bg no-boring" id="starsBg" aria-hidden="true"></div>
+<div class="scanlines no-boring" aria-hidden="true"></div>
+<div class="crt-vignette no-boring" aria-hidden="true"></div>
 
-<div class="stars-bg" id="starsBg" aria-hidden="true"></div>
-<div class="scanlines" aria-hidden="true"></div>
-<div class="crt-vignette" aria-hidden="true"></div>
+<div id="loader">
+  <div class="loader-text">✦ LOADING ANUSHA.EXE ✦</div>
+  <div class="loader-background">
+    <div class="loader-cat"></div>
+  </div>
+  <div class="loader-console">PLEASE WAIT</div>
+</div>
 
 <!-- socials, stay put the whole time -->
 <div class="social-dock" aria-label="Social links">
@@ -31,316 +32,272 @@
   </a>
 </div>
 
-<!-- scroll zoom intro thingy -->
+<!-- ============ FULL-BLEED SCROLL-ZOOM INTRO ============ -->
 <div class="hero-pin" id="heroPin">
   <div class="hero-sticky">
     <div class="hero-img-wrap" id="heroImgWrap">
-      <img class="hero-zoom-img" id="heroZoomImg" src="images/hero-illustration.png" alt="Pixel art illustration of Anusha surrounded by kawaii props">
+      <img class="hero-zoom-img" id="heroZoomImg" src="photo.png" alt="Pixel-art illustration of Anusha, hand-drawn, sitting cross-legged surrounded by kawaii props">
     </div>
     <div class="hero-zoom-overlay"></div>
-    <div class="scroll-cue" id="scrollCue"><span>scroll</span><span class="chevron"></span></div>
+    <div class="scroll-cue no-boring" id="scrollCue"><span>Scroll</span><span class="chevron"></span></div>
   </div>
 </div>
 
 <header>
-  <div class="brand">AB.dev</div>
-  <nav>
-    <ul>
-      <li><a href="#about" data-en="About" data-de="Über mich">About</a></li>
-      <li><a href="#skills" data-en="Skills" data-de="Fähigkeiten">Skills</a></li>
-      <li><a href="#projects" data-en="Projects" data-de="Projekte">Projects</a></li>
-      <li><a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a></li>
-      <li><a href="#recognition" data-en="Awards" data-de="Auszeichnungen">Awards</a></li>
-      <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="controls">
-    <button class="icon-btn lang-btn" id="langToggle" aria-label="Switch to German" title="Switch to German">🇩🇪</button>
-    <button class="icon-btn" id="lightToggle" aria-label="Light mode" title="Light mode">☀️</button>
-    <button class="icon-btn" id="darkToggle" aria-label="Dark mode" title="Dark mode">🌙</button>
+  <div class="nav-wrap">
+    <div class="brand">
+      <div class="brand-cat-wrap">
+        <svg viewBox="0 0 46 38">
+          <rect x="9" y="27" width="28" height="7" rx="2" fill="var(--card)" stroke="var(--ink)" stroke-width="1.6"/>
+          <path d="M11 9 Q23 -6 35 9" stroke="var(--purple)" stroke-width="2.6" fill="none"/>
+          <circle cx="11" cy="11" r="3.6" fill="var(--mint)" stroke="var(--ink)" stroke-width="1.6"/>
+          <circle cx="35" cy="11" r="3.6" fill="var(--mint)" stroke="var(--ink)" stroke-width="1.6"/>
+          <circle cx="23" cy="16" r="12" fill="var(--accent)" stroke="var(--ink)" stroke-width="2"/>
+          <path d="M12 10 L8 2 L17 7 Z" fill="var(--accent)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M34 10 L38 2 L29 7 Z" fill="var(--accent)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="18" cy="17" r="2.5" fill="var(--ink)"/>
+          <circle cx="28" cy="17" r="2.5" fill="var(--ink)"/>
+          <circle cx="17" cy="16" r="0.8" fill="#fff"/>
+          <circle cx="27" cy="16" r="0.8" fill="#fff"/>
+          <path d="M21.5 20 L23 21.8 L24.5 20 Z" fill="#fff" opacity=".9"/>
+          <path d="M23 21.8 v1 M23 22.8 q-2 1.6 -4 .3 M23 22.8 q2 1.6 4 .3" stroke="var(--ink)" stroke-width="1" fill="none" stroke-linecap="round"/>
+          <g class="bc-paw left"><ellipse cx="17" cy="30" rx="4" ry="3" fill="var(--accent)" stroke="var(--ink)" stroke-width="1.6"/></g>
+          <g class="bc-paw right"><ellipse cx="29" cy="30" rx="4" ry="3" fill="var(--accent)" stroke="var(--ink)" stroke-width="1.6"/></g>
+        </svg>
+      </div>
+      AB.dev<span class="blink-cursor">_</span>
+    </div>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="#about" data-en="About" data-de="Über mich">About</a></li>
+        <li><a href="#skills" data-en="Skills" data-de="Fähigkeiten">Skills</a></li>
+        <li><a href="#projects" data-en="Projects" data-de="Projekte">Projects</a></li>
+        <li><a href="#recognition" data-en="Awards" data-de="Auszeichnungen">Awards</a></li>
+        <li><a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a></li>
+        <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="controls">
+      <button class="icon-btn lang-btn" id="langToggle" aria-label="Switch to German" title="Switch to German">🇩🇪</button>
+      <button class="icon-btn" id="lightToggle" aria-label="Switch to light mode" title="Light mode">☀️</button>
+      <button class="icon-btn" id="darkToggle" aria-label="Switch to dark mode" title="Dark mode">🌙</button>
+      <button class="icon-btn" id="boringToggle" aria-label="Switch to boring mode" title="For people who don't like fun">🩶</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <div></div><div></div><div></div>
+      </button>
+    </div>
   </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" data-en="About" data-de="Über mich">About</a>
+    <a href="#skills" data-en="Skills" data-de="Fähigkeiten">Skills</a>
+    <a href="#projects" data-en="Projects" data-de="Projekte">Projects</a>
+    <a href="#recognition" data-en="Awards" data-de="Auszeichnungen">Awards</a>
+    <a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a>
+    <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
+    <a href="#" id="mobileResume" data-en="Resume" data-de="Lebenslauf">Resume</a>
+  </div>
+  <div id="scrollBar"></div>
 </header>
 
-<div class="marquee-wrap" aria-hidden="true">
+<div class="marquee-wrap no-boring" aria-hidden="true">
   <div class="marquee-track">
-    <span>★</span>PYTHON<span>★</span>C++<span>★</span>JAVA<span>★</span>REACT NATIVE<span>★</span>SALESFORCE AGENTFORCE<span>★</span>OPEN TO WORK OCT 2026<span>★</span>AWS<span>★</span>AZURE<span>★</span>PHP<span>★</span>MYSQL<span>★</span>DOCKER<span>★</span>UIPATH RPA<span>★</span>POWER BI<span>★</span>GRAPH THEORY<span>★</span>
-    <span>★</span>PYTHON<span>★</span>C++<span>★</span>JAVA<span>★</span>REACT NATIVE<span>★</span>SALESFORCE AGENTFORCE<span>★</span>OPEN TO WORK OCT 2026<span>★</span>AWS<span>★</span>AZURE<span>★</span>PHP<span>★</span>MYSQL<span>★</span>DOCKER<span>★</span>UIPATH RPA<span>★</span>POWER BI<span>★</span>GRAPH THEORY<span>★</span>
+    <span>★</span>PYTHON<span>★</span>C++<span>★</span>JAVA<span>★</span>REACT NATIVE<span>★</span>SALESFORCE AGENTFORCE<span>★</span>OPEN TO WORK OCT 2026<span>★</span>AWS<span>★</span>AZURE<span>★</span>PHP<span>★</span>MYSQL<span>★</span>DOCKER<span>★</span>SLIGHTLY TOO MANY BROWSER TABS OPEN<span>★</span>UIPATH RPA<span>★</span>POWER BI<span>★</span>GRAPH THEORY<span>★</span>IT WORKED FIRST TRY (ONCE)<span>★</span>
+    <span>★</span>PYTHON<span>★</span>C++<span>★</span>JAVA<span>★</span>REACT NATIVE<span>★</span>SALESFORCE AGENTFORCE<span>★</span>OPEN TO WORK OCT 2026<span>★</span>AWS<span>★</span>AZURE<span>★</span>PHP<span>★</span>MYSQL<span>★</span>DOCKER<span>★</span>SLIGHTLY TOO MANY BROWSER TABS OPEN<span>★</span>UIPATH RPA<span>★</span>POWER BI<span>★</span>GRAPH THEORY<span>★</span>IT WORKED FIRST TRY (ONCE)<span>★</span>
   </div>
 </div>
 
-<section class="hero" id="about">
-  <div class="about-row">
+<section class="hero">
   <div>
-  <div class="eyebrow" data-en="OPEN TO WORK · MÜLHEIM AN DER RUHR, DE" data-de="OFFEN FÜR ARBEIT · MÜLHEIM AN DER RUHR, DE">OPEN TO WORK · MÜLHEIM AN DER RUHR, DE</div>
-  <h1 class="sparkle glitch" id="heroName" data-text=""></h1><span class="type-cursor" id="typeCursor">|</span>
-  <div class="role" data-en="Computer Engineer" data-de="Informatikingenieurin">Computer Engineer</div>
-  <div style="position:relative; display:inline-block;">
-    <span class="pix-sprite heart" style="top:-14px; left:-10px; animation-delay:.2s;">♥</span>
-    <span class="pix-sprite star" style="top:-8px; right:-12px; animation-delay:.9s;">★</span>
-    <span class="pix-sprite mint" style="bottom:-6px; right:-14px; animation-delay:1.6s;">✦</span>
-    <div class="photo-frame" id="photoFrame">
-      <img src="images/photo.jpg" alt="Anusha Bhat" onerror="this.parentElement.textContent='[ photo goes here ]'">
+    <div class="eyebrow"><span class="dot"></span> <span data-en="OPEN TO WORK · MÜLHEIM AN DER RUHR, DE" data-de="OFFEN FÜR ARBEIT · MÜLHEIM AN DER RUHR, DE">OPEN TO WORK · MÜLHEIM AN DER RUHR, DE</span></div>
+    <h1 class="chrome-text sparkle glitch" id="heroName" data-text=""></h1><span class="type-cursor" id="typeCursor">|</span>
+    <span class="role" data-en="computer engineer" data-de="Informatikingenieurin">computer engineer</span>
+    <p class="lede" data-en="I build things end to end, from graph algorithms to full stacks, and I like making them look good while I'm at it. Currently doing QA and AI agent work at Siemens Energy, and finishing my Computer Engineering degree in Duisburg." data-de="Ich baue Dinge von Anfang bis Ende, von Graphalgorithmen bis zum kompletten Stack, und ich mag es, sie dabei auch gut aussehen zu lassen. Aktuell arbeite ich bei Siemens Energy an QA und KI-Agenten und schließe mein Informatikstudium in Duisburg ab.">
+      I build things end to end, from graph algorithms to full stacks, and I like making them look good while I'm at it. Currently doing QA and AI agent work at Siemens Energy, and finishing my Computer Engineering degree in Duisburg.
+    </p>
+    <p class="status-line" data-en="&gt; STATUS: finishing the degree, looking for the next hard problem to solve." data-de="&gt; STATUS: Studium wird abgeschlossen, auf der Suche nach dem nächsten harten Problem.">
+      &gt; STATUS: finishing the degree, looking for the next hard problem to solve.
+    </p>
+    <div class="btn-row">
+      <a class="btn" href="#projects" data-en="See my work" data-de="Meine Projekte">See my work</a>
+      <a class="btn ghost" href="resume.pdf" download id="resumeBtn" data-en="Download resume" data-de="Lebenslauf herunterladen">Download resume</a>
     </div>
   </div>
-  <p data-en="I am a Computer Engineering student at the University of Duisburg-Essen, and I currently work as a working student at Siemens Energy, where I test software and help build AI agents that make everyday work a little easier for the teams around me. I like projects that make me learn something new." data-de="Ich studiere Informatik an der Universität Duisburg-Essen und arbeite derzeit als Werkstudentin bei Siemens Energy, wo ich Software teste und KI-Agenten mitentwickle, die den Arbeitsalltag meiner Teams erleichtern. Ich mag Projekte, bei denen ich etwas Neues lerne.">
-    I am a Computer Engineering student at the University of Duisburg-Essen, and I currently work
-    as a working student at Siemens Energy, where I test software and help build AI agents that
-    make everyday work a little easier for the teams around me. I like projects that make me learn
-    something new.
-  </p>
-  <p data-en="Outside of code, I paint when I have the time for it, play a bit of sport, and volunteer with international students here in Germany. I'm also a major cat person as you'll probably soon notice." data-de="Neben dem Programmieren male ich, wenn ich Zeit dafür habe, treibe ein bisschen Sport und engagiere mich für internationale Studierende hier in Deutschland. Außerdem bin ich ein großer Katzenmensch — das wirst du bestimmt bald merken.">
-    Outside of code, I paint when I have the time for it, play a bit of sport, and volunteer with
-    international students here in Germany. I'm also a major cat person as you'll probably soon notice.
-  </p>
-  <div class="chip-row">
-    <span class="chip">🇮🇳 India → 🇦🇪 Dubai → 🇩🇪 Germany</span>
-    <span class="chip">B.Sc. Computer Engineering</span>
-    <span class="chip">Deutschlandstipendium Scholar</span>
-    <span class="chip">Cloud & Automation</span>
-  </div>
-  <a class="btn" href="resume.pdf" download data-en="Download resume" data-de="Lebenslauf herunterladen">Download resume</a>
-  </div>
-  <div class="win98-widget">
-    <div class="win98-bar"><span class="win98-title">PROPERTIES</span><span class="win98-btns"><span>_</span><span>x</span></span></div>
-    <div class="win98-widget-body">
-      <div class="wrow"><span data-en="Status" data-de="Status">Status</span><span class="wval" data-en="🟢 Open to work" data-de="🟢 Offen für Arbeit">🟢 Open to work</span></div>
-      <div class="wrow"><span data-en="Location" data-de="Standort">Location</span><span class="wval">Mülheim a.d. Ruhr</span></div>
-      <div class="wrow"><span data-en="Degree" data-de="Abschluss">Degree</span><span class="wval">B.Sc. 2026</span></div>
-      <div class="wrow"><span data-en="Caffeine" data-de="Koffein">Caffeine</span><span class="wval" data-en="∞ cups" data-de="∞ Tassen">∞ cups</span></div>
-      <div class="wrow"><span data-en="Bugs squashed" data-de="Bugs gefixt">Bugs squashed</span><span class="wval" data-en="too many" data-de="zu viele">too many</span></div>
+  <div class="hero-art">
+    <span class="pix-sprite heart no-boring" style="top:-6%; left:2%; animation-delay:.2s;">♥</span>
+    <span class="pix-sprite star no-boring" style="top:4%; right:0%; animation-delay:.9s;">★</span>
+    <span class="pix-sprite mint no-boring" style="bottom:10%; right:-6%; animation-delay:1.6s;">✦</span>
+    <span class="pix-sprite heart no-boring" style="bottom:-4%; left:8%; animation-delay:1.2s; font-size:16px;">♥</span>
+    <div class="photo-frame plinth" id="photoFrame">
+      <div class="washi no-boring"></div>
+      <div class="bg-code">function traverse(graph, start) {
+  const visited = new Set();
+  const stack = [start];
+  const order = [];
+  while (stack.length) {
+    const node = stack.pop();
+    if (visited.has(node)) continue;
+    visited.add(node);
+    order.push(node);
+    for (const n of graph[node] || []) {
+      if (!visited.has(n)) stack.push(n);
+    }
+  }
+  return order;
+}
+function dijkstra(graph, src) {
+  const dist = {}; const visited = {};
+  for (const v in graph) dist[v] = Infinity;
+  dist[src] = 0;
+  const pq = [[0, src]];
+  while (pq.length) {
+    pq.sort((a,b)=>a[0]-b[0]);
+    const [d,u] = pq.shift();
+    if (visited[u]) continue;
+    visited[u] = true;
+    for (const [v,w] of graph[u]) {
+      if (d+w < dist[v]) { dist[v]=d+w; pq.push([dist[v],v]); }
+    }
+  }
+  return dist;
+}</div>
+      <div class="shelf"></div>
+      <div class="walk-cat"><span class="e1"></span><span class="e2"></span><span class="b"></span><span class="n"></span></div>
     </div>
-  </div>
   </div>
 </section>
 
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track" style="animation-duration:20s;">
+<div class="marquee-wrap no-boring" aria-hidden="true" style="border-top:none;">
+  <div class="marquee-track" style="animation-duration:22s;">
     <span>♥</span>DUISBURG-ESSEN<span>♥</span>SIEMENS ENERGY<span>♥</span>DEUTSCHLANDSTIPENDIUM<span>♥</span>HACKATHON FINALIST x5<span>♥</span>LOVE DESIGNING<span>♥</span>PROBABLY WORKING ON MY NEXT VERSION OF THIS PORTFOLIO<span>♥</span>THIS IS THE 8TH ONE IN TWO MONTHS<span>♥</span>
     <span>♥</span>DUISBURG-ESSEN<span>♥</span>SIEMENS ENERGY<span>♥</span>DEUTSCHLANDSTIPENDIUM<span>♥</span>HACKATHON FINALIST x5<span>♥</span>LOVE DESIGNING<span>♥</span>PROBABLY WORKING ON MY NEXT VERSION OF THIS PORTFOLIO<span>♥</span>THIS IS THE 8TH ONE IN TWO MONTHS<span>♥</span>
   </div>
 </div>
 
-<section id="skills">
-  <div class="section-head">
-    <div class="eyebrow" data-en="WHAT I WORK WITH" data-de="WOMIT ICH ARBEITE">WHAT I WORK WITH</div>
+<section id="about" class="tint">
+  <div class="win98-bar no-boring"><span class="win98-title">C:\ANUSHA\ABOUT.EXE</span><span class="win98-btns"><span>_</span><span>□</span><span>x</span></span></div>
+  <div class="section-head reveal">
+    <div class="eyebrow"><span class="dot"></span> <span data-en="WHO I AM" data-de="ÜBER MICH">WHO I AM</span></div>
+    <h2 data-en="A little bit about me" data-de="Ein bisschen über mich">A little bit about me</h2>
+  </div>
+  <div class="about-grid reveal" style="max-width:none; display:grid; grid-template-columns:1.5fr 1fr; gap:36px; align-items:start;">
+    <div>
+      <p data-en="I am a Computer Engineering student at the University of Duisburg-Essen, and I currently work as a working student at Siemens Energy, where I test software and help build AI agents that make everyday work a little easier for the teams around me. I like projects that make me learn something new, whether that means writing a ray tracer in C++ from scratch, building a mobile app in a weekend at a hackathon, or modelling network resilience for my thesis." data-de="Ich studiere Informatik an der Universität Duisburg-Essen und arbeite derzeit als Werkstudentin bei Siemens Energy, wo ich Software teste und KI-Agenten mitentwickle, die den Arbeitsalltag meiner Teams erleichtern. Ich mag Projekte, bei denen ich etwas Neues lerne, egal ob das bedeutet, einen Ray Tracer in C++ von Grund auf zu schreiben, an einem Hackathon-Wochenende eine App zu bauen, oder Netzwerkresilienz für meine Abschlussarbeit zu modellieren.">
+        I am a Computer Engineering student at the University of Duisburg-Essen, and I currently work as a working student at Siemens Energy, where I test software and help build AI agents that make everyday work a little easier for the teams around me. I like projects that make me learn something new, whether that means writing a ray tracer in C++ from scratch, building a mobile app in a weekend at a hackathon, or modelling network resilience for my thesis.
+      </p>
+      <p data-en="Outside of code, I paint when I have the patience for it, I play a bit of sport to get out of my own head, and I volunteer with international students here in Germany, helping new arrivals find their footing the way people once helped me find mine. I'm also a major cat person, as you'll probably soon notice." data-de="Neben dem Programmieren male ich, wenn ich die Geduld dafür habe, treibe ein bisschen Sport, um abzuschalten, und engagiere ich mich für internationale Studierende hier in Deutschland, denen ich helfe, sich einzuleben, so wie mir damals geholfen wurde. Außerdem bin ich ein großer Katzenmensch — das wirst du bestimmt bald merken." style="margin-top:18px;">
+        Outside of code, I paint when I have the patience for it, I play a bit of sport to get out of my own head, and I volunteer with international students here in Germany, helping new arrivals find their footing the way people once helped me find mine. I'm also a major cat person, as you'll probably soon notice.
+      </p>
+      <div class="chip-row">
+        <span class="chip">🇮🇳 India → 🇦🇪 Dubai → 🇩🇪 Germany</span>
+        <span class="chip">B.Sc. Computer Engineering</span>
+        <span class="chip">Deutschlandstipendium Scholar</span>
+        <span class="chip">Cloud & Automation</span>
+      </div>
+    </div>
+    <div class="win98-widget no-boring">
+      <div class="win98-bar"><span class="win98-title">PROPERTIES</span><span class="win98-btns"><span>_</span><span>x</span></span></div>
+      <div class="win98-widget-body">
+        <div class="wrow"><span data-en="Status" data-de="Status">Status</span><span class="wval" data-en="🟢 Open to work" data-de="🟢 Offen für Arbeit">🟢 Open to work</span></div>
+        <div class="wrow"><span data-en="Location" data-de="Standort">Location</span><span class="wval">Mülheim a.d. Ruhr</span></div>
+        <div class="wrow"><span data-en="Degree" data-de="Abschluss">Degree</span><span class="wval">B.Sc. 2026</span></div>
+        <div class="wrow"><span data-en="Caffeine" data-de="Koffein">Caffeine</span><span class="wval" data-en="∞ cups" data-de="∞ Tassen">∞ cups</span></div>
+        <div class="wrow"><span data-en="Bugs squashed" data-de="Bugs gefixt">Bugs squashed</span><span class="wval" data-en="too many" data-de="zu viele">too many</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="tint">
+  <div class="win98-bar no-boring"><span class="win98-title">C:\ANUSHA\SKILLS.SYS</span><span class="win98-btns"><span>_</span><span>□</span><span>x</span></span></div>
+  <div class="section-head reveal">
+    <div class="eyebrow"><span class="dot"></span> <span data-en="WHAT I WORK WITH" data-de="WOMIT ICH ARBEITE">WHAT I WORK WITH</span></div>
     <h2 data-en="Skills" data-de="Fähigkeiten">Skills</h2>
   </div>
-  <div class="skills-grid">
-    <div class="skill-card">Python</div>
-    <div class="skill-card">C++</div>
-    <div class="skill-card">Java</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">React Native</div>
-    <div class="skill-card">MySQL</div>
-    <div class="skill-card">AWS</div>
-    <div class="skill-card">Azure</div>
-    <div class="skill-card">Salesforce</div>
-    <div class="skill-card">UiPath RPA</div>
-    <div class="skill-card">Power BI</div>
-    <div class="skill-card">Docker</div>
+  <div class="skills-toolbar reveal" id="filterBar"></div>
+  <div class="skills-body reveal">
+    <div class="radar-wrap" id="radarWrap"></div>
+    <div class="logo-grid" id="skillsGrid"></div>
   </div>
+  <div class="core-concepts-head reveal">✦ <span data-en="Core Concepts" data-de="Kernkonzepte">Core Concepts</span></div>
+  <div class="chip-row reveal" id="coreConceptsRow"></div>
+  <div class="cert-row reveal" id="certRow"></div>
 </section>
 
-<section id="projects">
-  <div class="section-head">
-    <div class="eyebrow" data-en="THINGS I'VE BUILT" data-de="WAS ICH GEBAUT HABE">THINGS I'VE BUILT</div>
+<section id="projects" class="tint">
+  <div class="win98-bar no-boring"><span class="win98-title">C:\ANUSHA\PROJECTS.DLL</span><span class="win98-btns"><span>_</span><span>□</span><span>x</span></span></div>
+  <div class="section-head reveal" style="position:relative;">
+    <div class="eyebrow"><span class="dot"></span> <span data-en="THINGS I'VE BUILT" data-de="WAS ICH GEBAUT HABE">THINGS I'VE BUILT</span></div>
     <h2 data-en="Projects" data-de="Projekte">Projects</h2>
+    <span class="pix-sprite star no-boring" style="top:-6px; right:14px; animation-delay:.4s;">★</span>
   </div>
-  <div class="project-grid">
-
-    <div class="project-card">
-      <div class="project-thumb">
-        <img src="images/projects/ray-tracer.jpg" alt="Realistic Ray Tracer Engine" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
-      </div>
-      <div class="project-body">
-        <h3>Realistic Ray Tracer Engine</h3>
-        <p data-en="Reflection, refraction, Phong lighting and global illumination, written in C++ with multithreading." data-de="Reflexion, Brechung, Phong-Beleuchtung und globale Beleuchtung, geschrieben in C++ mit Multithreading.">Reflection, refraction, Phong lighting and global illumination, written in C++ with multithreading.</p>
-        <div class="tag-row"><span class="tag">C++</span><span class="tag">OOP</span><span class="tag">Multithreading</span></div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-thumb">
-        <img src="images/projects/hallohub.jpg" alt="HalloHub" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
-      </div>
-      <div class="project-body">
-        <h3>HalloHub</h3>
-        <p data-en="A hackathon-built mobile app that walks international students through visas, housing, and university paperwork." data-de="Eine auf einem Hackathon entwickelte App, die internationale Studierende durch Visum, Wohnungssuche und Uni-Papierkram führt.">A hackathon-built mobile app that walks international students through visas, housing, and university paperwork.</p>
-        <div class="tag-row"><span class="tag">React Native</span><span class="tag">Expo</span></div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-thumb">
-        <img src="images/projects/face-recognition.jpg" alt="Face Recognition System" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
-      </div>
-      <div class="project-body">
-        <h3>Face Recognition System</h3>
-        <p data-en="Real-time face detection and recognition with a MySQL backend, reaching 90% accuracy on a controlled dataset." data-de="Echtzeit-Gesichtserkennung mit MySQL-Backend, die auf einem kontrollierten Datensatz 90% Genauigkeit erreicht.">Real-time face detection and recognition with a MySQL backend, reaching 90% accuracy on a controlled dataset.</p>
-        <div class="tag-row"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">MySQL</span></div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-thumb">
-        <img src="images/projects/financial-data-streamer.jpg" alt="Financial Data Streamer" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
-      </div>
-      <div class="project-body">
-        <h3>Financial Data Streamer</h3>
-        <p data-en="A JP Morgan Chase Forage simulation project: a live-updating financial data dashboard that streams and renders trading data in real time." data-de="Ein JP-Morgan-Chase-Forage-Simulationsprojekt: ein live aktualisiertes Finanzdaten-Dashboard, das Handelsdaten in Echtzeit streamt und darstellt.">A JP Morgan Chase Forage simulation project: a live-updating financial data dashboard that streams and renders trading data in real time.</p>
-        <div class="tag-row"><span class="tag">JavaScript</span><span class="tag">Data Viz</span></div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-thumb">
-        <img src="images/projects/student-teacher-dashboard.jpg" alt="Student-Teacher Dashboard" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
-      </div>
-      <div class="project-body">
-        <h3>Student-Teacher Dashboard</h3>
-        <p data-en="A role-based dashboard system for schools, with separate views for students and teachers, secure logins, an attendance tracker, and a notifications module." data-de="Ein rollenbasiertes Dashboard-System für Schulen mit getrennten Ansichten für Schüler und Lehrer, sicheren Logins, Anwesenheitsverfolgung und Benachrichtigungsmodul.">A role-based dashboard system for schools, with separate views for students and teachers, secure logins, an attendance tracker, and a notifications module.</p>
-        <div class="tag-row"><span class="tag">Java</span><span class="tag">Authentication</span><span class="tag">GUI</span></div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-thumb">
-        <img src="images/projects/inventory-management.jpg" alt="Inventory Management System" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
-      </div>
-      <div class="project-body">
-        <h3>Inventory Management System</h3>
-        <p data-en="A desktop inventory tool with search, live updates, and auto-generated reports." data-de="Ein Desktop-Inventartool mit Suche, Live-Updates und automatisch generierten Berichten.">A desktop inventory tool with search, live updates, and auto-generated reports.</p>
-        <div class="tag-row"><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Tkinter</span></div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-thumb">
-        <img src="images/projects/multipath-overlays.jpg" alt="Budgeted Multipath Overlays" style="width:100%;height:100%;object-fit:cover;" onerror="this.remove()">
-      </div>
-      <div class="project-body">
-        <h3>Budgeted Multipath Overlays</h3>
-        <p data-en="My bachelor thesis: a graph simulation framework that decides where to place backup network links so a backbone stays resilient even when nodes fail, without blowing the budget." data-de="Meine Bachelorarbeit: ein Graph-Simulationsframework, das entscheidet, wo Backup-Netzwerkverbindungen platziert werden, damit ein Backbone auch bei Knotenausfällen belastbar bleibt, ohne das Budget zu sprengen.">My bachelor thesis: a graph simulation framework that decides where to place backup network links so a backbone stays resilient even when nodes fail, without blowing the budget.</p>
-        <div class="tag-row"><span class="tag">Python</span><span class="tag">NetworkX</span><span class="tag">Graph Theory</span></div>
-      </div>
-    </div>
-
-  </div>
+  <div class="project-grid reveal" id="projectGrid"></div>
 </section>
 
-<section id="experience">
-  <div class="section-head">
-    <div class="eyebrow" data-en="WHERE I'VE WORKED" data-de="WO ICH GEARBEITET HABE">WHERE I'VE WORKED</div>
+<section id="recognition" class="tint">
+  <div class="win98-bar no-boring"><span class="win98-title">C:\ANUSHA\AWARDS.BAT</span><span class="win98-btns"><span>_</span><span>□</span><span>x</span></span></div>
+  <div class="section-head reveal">
+    <div class="eyebrow"><span class="dot"></span> <span data-en="RECOGNITION" data-de="AUSZEICHNUNGEN">RECOGNITION</span></div>
+    <h2 data-en="Achievements & Awards" data-de="Erfolge & Auszeichnungen">Achievements & Awards</h2>
+  </div>
+  <div class="awards-grid reveal" id="awardsGrid"></div>
+</section>
+
+<section id="experience" class="tint">
+  <div class="win98-bar no-boring"><span class="win98-title">C:\ANUSHA\EXPERIENCE.LOG</span><span class="win98-btns"><span>_</span><span>□</span><span>x</span></span></div>
+  <div class="section-head reveal">
+    <div class="eyebrow"><span class="dot"></span> <span data-en="WHERE I'VE WORKED" data-de="WO ICH GEARBEITET HABE">WHERE I'VE WORKED</span></div>
     <h2 data-en="Experience" data-de="Erfahrung">Experience</h2>
   </div>
-  <div class="experience-row">
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-role" data-en="Working Student, Digitalization, QA & AI Automation" data-de="Werkstudentin, Digitalisierung, QA & KI-Automatisierung">Working Student, Digitalization, QA & AI Automation</div>
-      <div class="tl-org">Siemens Energy AG</div>
-      <span class="tl-date" data-en="Jan 2026 — Present · Mülheim an der Ruhr" data-de="Jan 2026 — heute · Mülheim an der Ruhr">Jan 2026 — Present · Mülheim an der Ruhr</span>
-      <p class="tl-desc" data-en="Testing Salesforce Field Service workflows, validating enterprise reports, and building Agentforce AI agents that summarise work orders and track service milestones." data-de="Testen von Salesforce-Field-Service-Workflows, Prüfen von Unternehmensberichten und Entwicklung von Agentforce-KI-Agenten, die Arbeitsaufträge zusammenfassen und Servicemeilensteine verfolgen.">Testing Salesforce Field Service workflows, validating enterprise reports, and building Agentforce AI agents that summarise work orders and track service milestones.</p>
-    </div>
-    <div class="tl-item">
-      <div class="tl-role" data-en="Technical Intern, Digital Twin & 3D Measurement" data-de="Technische Praktikantin, Digital Twin & 3D-Messtechnik">Technical Intern, Digital Twin & 3D Measurement</div>
-      <div class="tl-org">Siemens Energy AG</div>
-      <span class="tl-date" data-en="Sep 2025 — Dec 2025 · Mülheim an der Ruhr" data-de="Sep 2025 — Dez 2025 · Mülheim an der Ruhr">Sep 2025 — Dec 2025 · Mülheim an der Ruhr</span>
-      <p class="tl-desc" data-en="Supported digital twin workflows with PolyWorks and photogrammetry, ran 3D scanners and laser trackers, and automated parts of the measurement pipeline with Python." data-de="Unterstützung von Digital-Twin-Workflows mit PolyWorks und Photogrammetrie, Bedienung von 3D-Scannern und Lasertrackern und Automatisierung von Teilen der Messpipeline mit Python.">Supported digital twin workflows with PolyWorks and photogrammetry, ran 3D scanners and laser trackers, and automated parts of the measurement pipeline with Python.</p>
-    </div>
-    <div class="tl-item">
-      <div class="tl-role" data-en="Student Intern, Web Development" data-de="Praktikantin, Webentwicklung">Student Intern, Web Development</div>
-      <div class="tl-org">Freshman Institute, FH Aachen</div>
-      <span class="tl-date" data-en="Oct 2022 — Dec 2022 · Aachen" data-de="Okt 2022 — Dez 2022 · Aachen">Oct 2022 — Dec 2022 · Aachen</span>
-      <p class="tl-desc" data-en="Built responsive pages with HTML, CSS, PHP, and JavaScript, plus backend scripting and functional testing." data-de="Responsive Seiten mit HTML, CSS, PHP und JavaScript gebaut, dazu Backend-Skripting und funktionale Tests.">Built responsive pages with HTML, CSS, PHP, and JavaScript, plus backend scripting and functional testing.</p>
-    </div>
-  </div>
-  <div class="win98-widget">
-    <div class="win98-bar"><span class="win98-title">HIGH SCORES</span><span class="win98-btns"><span>_</span><span>x</span></span></div>
-    <div class="win98-widget-body">
-      <div class="wrow"><span data-en="Roles held" data-de="Rollen bekleidet">Roles held</span><span class="wval">4</span></div>
-      <div class="wrow"><span data-en="Years experience" data-de="Jahre Erfahrung">Years experience</span><span class="wval" data-en="2 and counting" data-de="2 und zählt weiter">2 and counting</span></div>
-      <div class="wrow"><span data-en="Scanners &amp; trackers run" data-de="Scanner &amp; Tracker bedient">Scanners &amp; trackers run</span><span class="wval" data-en="many" data-de="viele">many</span></div>
-      <div class="wrow"><span data-en="Scripts shipped" data-de="Skripte veröffentlicht">Scripts shipped</span><span class="wval" data-en="countless" data-de="unzählige">countless</span></div>
-      <div class="wrow"><span data-en="Level" data-de="Level">Level</span><span class="wval" data-en="still learning ★" data-de="lerne noch ★">still learning ★</span></div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<section id="recognition">
-  <div class="section-head">
-    <div class="eyebrow" data-en="RECOGNITION" data-de="AUSZEICHNUNGEN">RECOGNITION</div>
-    <h2 data-en="Achievements &amp; Awards" data-de="Erfolge &amp; Auszeichnungen">Achievements &amp; Awards</h2>
-  </div>
-  <div class="awards-grid">
-    <div class="award-card">
-      <div class="award-icon">🏅</div>
-      <div>
-        <div class="award-title" data-en="Deutschlandstipendium Scholar 2026" data-de="Deutschlandstipendium-Stipendiatin 2026">Deutschlandstipendium Scholar 2026</div>
-        <div class="award-desc" data-en="Merit-based national scholarship at UDE, sponsored by DEICHMANN." data-de="Leistungsstipendium an der UDE, gefördert von DEICHMANN.">Merit-based national scholarship at UDE, sponsored by DEICHMANN.</div>
-      </div>
-    </div>
-    <div class="award-card">
-      <div class="award-icon">🏆</div>
-      <div>
-        <div class="award-title" data-en="International Coding Combat — Winner" data-de="International Coding Combat — Siegerin">International Coding Combat — Winner</div>
-        <div class="award-desc" data-en="First place across 30+ competing countries." data-de="Erster Platz unter mehr als 30 teilnehmenden Ländern.">First place across 30+ competing countries.</div>
-      </div>
-    </div>
-    <div class="award-card">
-      <div class="award-icon">🎯</div>
-      <div>
-        <div class="award-title" data-en="Curtin University Hackathon — Finalist" data-de="Curtin University Hackathon — Finalistin">Curtin University Hackathon — Finalist</div>
-        <div class="award-desc" data-en="Built a smart scheduling tool in Python." data-de="Ein intelligentes Terminplanungstool in Python entwickelt.">Built a smart scheduling tool in Python.</div>
-      </div>
-    </div>
-    <div class="award-card">
-      <div class="award-icon">🤖</div>
-      <div>
-        <div class="award-title" data-en="Robotic Arm Arduino Workshop — Winner" data-de="Robotic-Arm-Arduino-Workshop — Siegerin">Robotic Arm Arduino Workshop — Winner</div>
-        <div class="award-desc" data-en="Interdisciplinary engineering competition." data-de="Interdisziplinärer Ingenieurwettbewerb.">Interdisciplinary engineering competition.</div>
-      </div>
-    </div>
-    <div class="award-card">
-      <div class="award-icon">📊</div>
-      <div>
-        <div class="award-title" data-en="Top Grades at UDE" data-de="Bestnoten an der UDE">Top Grades at UDE</div>
-        <div class="award-desc" data-en="Computer Engineering 1.0 · Logic Design 1.0 · Probability &amp; Statistics 1.3" data-de="Technische Informatik 1,0 · Logik-Design 1,0 · Wahrscheinlichkeit &amp; Statistik 1,3">Computer Engineering 1.0 · Logic Design 1.0 · Probability &amp; Statistics 1.3</div>
-      </div>
-    </div>
-    <div class="award-card">
-      <div class="award-icon">🌐</div>
-      <div>
-        <div class="award-title" data-en="5+ Hackathons" data-de="5+ Hackathons">5+ Hackathons</div>
-        <div class="award-desc" data-en="Web, AI and automation tracks across university and national-level events." data-de="Web-, KI- und Automatisierungs-Tracks bei Uni- und landesweiten Events.">Web, AI and automation tracks across university and national-level events.</div>
+  <div style="display:grid; grid-template-columns:1.6fr 1fr; gap:36px; align-items:start;">
+    <div class="timeline reveal" id="timeline"></div>
+    <div class="win98-widget no-boring">
+      <div class="win98-bar"><span class="win98-title">HIGH SCORES</span><span class="win98-btns"><span>_</span><span>x</span></span></div>
+      <div class="win98-widget-body">
+        <div class="wrow"><span data-en="Roles held" data-de="Rollen bekleidet">Roles held</span><span class="wval">4</span></div>
+        <div class="wrow"><span data-en="Years experience" data-de="Jahre Erfahrung">Years experience</span><span class="wval" data-en="2 and counting" data-de="2 und zählt weiter">2 and counting</span></div>
+        <div class="wrow"><span data-en="Scanners &amp; trackers run" data-de="Scanner &amp; Tracker bedient">Scanners &amp; trackers run</span><span class="wval" data-en="many" data-de="viele">many</span></div>
+        <div class="wrow"><span data-en="Scripts shipped" data-de="Skripte veröffentlicht">Scripts shipped</span><span class="wval" data-en="countless" data-de="unzählige">countless</span></div>
+        <div class="wrow"><span data-en="Level" data-de="Level">Level</span><span class="wval" data-en="still learning ★" data-de="lerne noch ★">still learning ★</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="fun-fact-row">
-  <div class="stars-line">♥ ★ ♥ ★ ♥</div>
-  <p data-en="Fun fact: I've been to 25+ countries, and Germany still has the best döner." data-de="Übrigens: War schon in über 25 Ländern, und den besten Döner gibt's trotzdem hier in Deutschland.">Fun fact: I've been to 25+ countries, and Germany still has the best döner.</p>
+<div class="uwu-row reveal">
+  <div class="uwu-divider">
+    <div class="uwu-tri"><span>▲</span><span>▲</span></div>
+    <div class="uwu-face">= ω =</div>
+  </div>
+  <div style="font-size:18px; letter-spacing:10px;">♥ ★ ♥ ★ ♥</div>
+  <p class="uwu-joke" data-en="Fun fact: I've been to 25+ countries, and Germany still has the best döner." data-de="Übrigens: War schon in über 25 Ländern, und den besten Döner gibt's trotzdem hier in Deutschland.">Fun fact: I've been to 25+ countries, and Germany still has the best döner.</p>
 </div>
 
 <section id="contact">
-  <div class="section-head">
-    <div class="eyebrow" data-en="SAY HELLO" data-de="SAG HALLO">SAY HELLO</div>
+  <div class="win98-bar no-boring"><span class="win98-title">C:\ANUSHA\CONTACT.COM</span><span class="win98-btns"><span>_</span><span>□</span><span>x</span></span></div>
+  <div class="section-head reveal">
+    <div class="eyebrow"><span class="dot"></span> <span data-en="SAY HELLO" data-de="SAG HALLO">SAY HELLO</span></div>
     <h2 data-en="Get In Touch" data-de="Kontaktiere mich">Get In Touch</h2>
   </div>
-  <p style="color:var(--text-soft); margin-bottom:16px; max-width:60ch;" data-en="Whether you want to talk about a project, an opportunity, or just think we'd vibe, my inbox is open. Available from October 2026 and happy to relocate within Germany." data-de="Ob du über ein Projekt, eine Möglichkeit sprechen willst, oder einfach denkst, wir würden gut zusammenpassen, mein Postfach steht offen. Verfügbar ab Oktober 2026 und gerne umzugsbereit innerhalb Deutschlands.">
-    Whether you want to talk about a project, an opportunity, or just think we'd vibe, my inbox is open.
-    Available from October 2026 and happy to relocate within Germany.
-  </p>
-  <form action="https://formspree.io/f/maqgaqjp" method="POST">
-    <input type="text" name="name" id="nameInput" placeholder="Your name" required>
-    <input type="email" name="email" id="emailInput" placeholder="Your email" required>
-    <textarea name="message" id="messageInput" placeholder="Say something nice (or just say hi)" required></textarea>
-    <button class="btn" type="submit" style="border:none; cursor:pointer;" data-en="✉ Send Message" data-de="✉ Nachricht senden">✉ Send Message</button>
-  </form>
+  <div class="contact-wrap reveal">
+    <div>
+      <p style="color:var(--text-soft); margin-bottom:16px;" data-en="Whether you want to talk about a project, an opportunity, or just think we would vibe, my inbox is open. Available from October 2026 and happy to relocate within Germany." data-de="Ob du über ein Projekt, eine Möglichkeit sprechen willst, oder einfach denkst, wir würden gut zusammenpassen, mein Postfach steht offen. Verfügbar ab Oktober 2026 und gerne umzugsbereit innerhalb Deutschlands.">
+        Whether you want to talk about a project, an opportunity, or just think we would vibe, my inbox is open. Available from October 2026 and happy to relocate within Germany.
+      </p>
+    </div>
+    <form action="https://formspree.io/f/maqgaqjp" method="POST">
+      <input type="text" name="name" id="nameInput" placeholder="Your name" required>
+      <input type="email" name="email" id="emailInput" placeholder="Your email" required>
+      <textarea name="message" id="messageInput" placeholder="Say something nice (or just say hi)" required></textarea>
+      <button class="btn" type="submit" data-en="✉ Send Message" data-de="✉ Nachricht senden">✉ Send Message</button>
+      <span class="form-note" id="formNote">Powered by <a href="https://formspree.io/" target="_blank" rel="noopener">Formspree</a> — goes straight to my inbox ♡</span>
+    </form>
+  </div>
 </section>
 
-<footer data-en="Designed &amp; built by Anusha Bhat ✦ Mülheim an der Ruhr, Germany" data-de="Gestaltet &amp; entwickelt von Anusha Bhat ✦ Mülheim an der Ruhr, Deutschland">Designed &amp; built by Anusha Bhat ✦ Mülheim an der Ruhr, Germany</footer>
+<footer>
+  <span data-en="Designed &amp; built by Anusha Bhat ✦ Mülheim an der Ruhr, Germany ✦ 2025" data-de="Gestaltet &amp; entwickelt von Anusha Bhat ✦ Mülheim an der Ruhr, Deutschland ✦ 2025">Designed &amp; built by Anusha Bhat ✦ Mülheim an der Ruhr, Germany ✦ 2025</span>
+  <span data-en="Made with lots of ♡ and too much chai" data-de="Gemacht mit viel ♡ und zu viel Chai">Made with lots of ♡ and too much chai</span>
+</footer>
 
 <script src="script.js"></script>
 </body>
