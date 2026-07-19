@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,17 @@
 <div class="stars-bg" id="starsBg" aria-hidden="true"></div>
 <div class="scanlines" aria-hidden="true"></div>
 <div class="crt-vignette" aria-hidden="true"></div>
+
+<!-- scroll zoom intro thingy -->
+<div class="hero-pin" id="heroPin">
+  <div class="hero-sticky">
+    <div class="hero-img-wrap" id="heroImgWrap">
+      <img class="hero-zoom-img" id="heroZoomImg" src="images/hero-illustration.png" alt="Pixel art illustration of Anusha surrounded by kawaii props">
+    </div>
+    <div class="hero-zoom-overlay"></div>
+    <div class="scroll-cue" id="scrollCue"><span>scroll</span><span class="chevron"></span></div>
+  </div>
+</div>
 
 <header>
   <div class="brand">AB.dev</div>
@@ -67,7 +78,7 @@
     make everyday work a little easier for the teams around me. I like projects that make me learn
     something new.
   </p>
-  <p data-en="Outside of code, I paint when I have the time for it, play a bit of sport, and volunteer with international students here in Germany. I'm also a major cat person as you'll probably notice." data-de="Neben dem Programmieren male ich, wenn ich Zeit dafür habe, treibe ein bisschen Sport und engagiere mich für internationale Studierende hier in Deutschland. Außerdem bin ich ein großer Katzenmensch.. das wird man merken.">
+  <p data-en="Outside of code, I paint when I have the time for it, play a bit of sport, and volunteer with international students here in Germany. I'm also a major cat person as you'll probably soon notice." data-de="Neben dem Programmieren male ich, wenn ich Zeit dafür habe, treibe ein bisschen Sport und engagiere mich für internationale Studierende hier in Deutschland. Außerdem bin ich ein großer Katzenmensch — das wirst du bestimmt bald merken.">
     Outside of code, I paint when I have the time for it, play a bit of sport, and volunteer with
     international students here in Germany. I'm also a major cat person as you'll probably soon notice.
   </p>
@@ -82,11 +93,11 @@
   <div class="win98-widget">
     <div class="win98-bar"><span class="win98-title">PROPERTIES</span><span class="win98-btns"><span>_</span><span>x</span></span></div>
     <div class="win98-widget-body">
-      <div class="wrow"><span>Status</span><span class="wval">🟢 Open to work</span></div>
-      <div class="wrow"><span>Location</span><span class="wval">Mülheim a.d. Ruhr</span></div>
-      <div class="wrow"><span>Degree</span><span class="wval">B.Sc. Comp Eng 2026</span></div>
-      <div class="wrow"><span>Coffee (er, chai)</span><span class="wval">∞ cups</span></div>
-      <div class="wrow"><span>Bugs squashed</span><span class="wval">too many</span></div>
+      <div class="wrow"><span data-en="Status" data-de="Status">Status</span><span class="wval" data-en="🟢 Open to work" data-de="🟢 Offen für Arbeit">🟢 Open to work</span></div>
+      <div class="wrow"><span data-en="Location" data-de="Standort">Location</span><span class="wval">Mülheim a.d. Ruhr</span></div>
+      <div class="wrow"><span data-en="Degree" data-de="Abschluss">Degree</span><span class="wval">B.Sc. 2026</span></div>
+      <div class="wrow"><span data-en="caffeine" data-de="koffein">caffeine</span><span class="wval" data-en="∞ cups" data-de="∞ Tassen">∞ cups</span></div>
+      <div class="wrow"><span data-en="Bugs squashed" data-de="Bugs gefixt">Bugs squashed</span><span class="wval" data-en="too many" data-de="zu viele">too many</span></div>
     </div>
   </div>
   </div>
@@ -236,11 +247,11 @@
   <div class="win98-widget">
     <div class="win98-bar"><span class="win98-title">HIGH SCORES</span><span class="win98-btns"><span>_</span><span>x</span></span></div>
     <div class="win98-widget-body">
-      <div class="wrow"><span>Roles held</span><span class="wval">4</span></div>
-      <div class="wrow"><span>Work orders summarised</span><span class="wval">100s</span></div>
-      <div class="wrow"><span>Scanners &amp; trackers run</span><span class="wval">many</span></div>
-      <div class="wrow"><span>Python scripts shipped</span><span class="wval">countless</span></div>
-      <div class="wrow"><span>Level</span><span class="wval">still grinding ★</span></div>
+      <div class="wrow"><span data-en="Roles held" data-de="Rollen bekleidet">Roles held</span><span class="wval">4</span></div>
+      <div class="wrow"><span data-en="years experience" data-de="Jahre Erfahrung">years experience</span><span class="wval" data-en="2 and counting" data-de="2 und zählt weiter">2 and counting</span></div>
+      <div class="wrow"><span data-en="Scanners &amp; trackers run" data-de="Scanner &amp; Tracker bedient">Scanners &amp; trackers run</span><span class="wval" data-en="many" data-de="viele">many</span></div>
+      <div class="wrow"><span data-en="Scripts shipped" data-de="Skripte veröffentlicht">Scripts shipped</span><span class="wval" data-en="countless" data-de="unzählige">countless</span></div>
+      <div class="wrow"><span data-en="Level" data-de="Level">Level</span><span class="wval" data-en="still learning ★" data-de="lerne noch ★">still learning ★</span></div>
     </div>
   </div>
   </div>
@@ -299,7 +310,7 @@
 
 <div class="fun-fact-row">
   <div class="stars-line">♥ ★ ♥ ★ ♥</div>
-  <p data-en="Fun fact: I've visited over 25 countries, slowly filling the map." data-de="Fun Fact: War schon in über 25 Ländern. Karte wird langsam voll.">Fun fact: I've visited over 25 countries, and I'm not planning to stop.</p>
+  <p data-en="Fun fact: I've visited over 25 countries, and I'm not planning to stop." data-de="Übrigens: Ich habe schon über 25 Länder besucht, und das ist noch nicht das Ende.">Fun fact: I've visited over 25 countries, and I'm not planning to stop.</p>
 </div>
 
 <section id="contact">

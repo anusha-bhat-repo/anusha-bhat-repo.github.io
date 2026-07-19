@@ -1,7 +1,14 @@
-// curtain-up: hide the loader once everything is ready
-window.addEventListener('load', () => {
-  setTimeout(() => document.getElementById('loader').classList.add('hide'), 500);
-});
+//eventually hide the loader 
+function hideLoader(){
+  const loader = document.getElementById('loader');
+  if (loader) loader.classList.add('hide');
+}
+if (document.readyState === 'complete') {
+  setTimeout(hideLoader, 200);
+} else {
+  window.addEventListener('load', () => setTimeout(hideLoader, 200));
+}
+setTimeout(hideLoader, 4000); 
 
 const root = document.documentElement;
 const lightToggle = document.getElementById('lightToggle');
@@ -16,7 +23,7 @@ function applyTheme(theme){
 lightToggle.addEventListener('click', () => applyTheme('light'));
 darkToggle.addEventListener('click', () => applyTheme('dark'));
 
-applyTheme('light');
+applyTheme('dark');
 
 // --- language toggle ---
 const langToggle = document.getElementById('langToggle');
@@ -65,7 +72,7 @@ langToggle.addEventListener('click', () => {
   }
 })();
 
-// --- hero name typing effect thingy ---
+// --- name typing effect thingy ---
 function typeName(){
   const el = document.getElementById('heroName');
   const text = 'Anusha Bhat';
@@ -80,7 +87,25 @@ function typeName(){
 }
 window.addEventListener('load', () => setTimeout(typeName, 300));
 
-// ---  3D tilt on the photo ---
+// --- scroll zoom intro ---
+(function(){
+  const pin = document.getElementById('heroPin');
+  const img = document.getElementById('heroZoomImg');
+  const cue = document.getElementById('scrollCue');
+  if (!pin || !img) return;
+  function onScroll(){
+    const rect = pin.getBoundingClientRect();
+    const total = pin.offsetHeight - window.innerHeight;
+    const progress = Math.min(Math.max(-rect.top / total, 0), 1);
+    const scale = 1 + progress * 1.3;
+    img.style.transform = `scale(${scale})`;
+    if (cue) cue.style.opacity = progress > 0.04 ? 0 : 0.9;
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+})();
+
+// ---  3D tilt ---
 (function(){
   const el = document.getElementById('photoFrame');
   el.addEventListener('mousemove', (e) => {
