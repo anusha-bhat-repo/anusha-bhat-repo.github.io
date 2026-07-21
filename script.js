@@ -413,7 +413,7 @@ const projects = [
     cats: ['Languages', 'CloudAI'],
     link: null,
     linkText: { en: 'In progress', de: 'In Arbeit' },
-    image: 'images/projects/multipath-overlays.jpg'
+    image: 'images/projects/multipath-overlays.png'
   },
   {
     title: { en: 'Realistic Ray Tracer Engine', de: 'Realistic Ray Tracer Engine' },

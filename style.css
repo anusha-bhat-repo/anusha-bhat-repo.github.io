@@ -76,7 +76,7 @@ img{max-width:100%; display:block;}
 
 [data-theme="boring"] .no-boring{ display:none !important; }
 
-/* PIXEL-BEVEL / 3D DEPTH LAYER */
+/*  3D LAYER */
 .pixel-bevel{
   box-shadow:
     inset 2px 2px 0 var(--bevel-hi),
@@ -99,7 +99,7 @@ img{max-width:100%; display:block;}
 }
 [data-theme="boring"] .plinth::after, [data-theme="boring"] .plinth::before{ display:none; }
 
-/* scanline*/
+/* scanline */
 .scanlines{
   position:fixed; inset:0; z-index:250; pointer-events:none; opacity:.55; mix-blend-mode:multiply;
   background:repeating-linear-gradient(to bottom, rgba(46,31,61,0.05) 0px, rgba(46,31,61,0.05) 1px, transparent 1px, transparent 3px);
@@ -194,7 +194,7 @@ section.tint{ position:relative; }
 }
 .loader-console::after{ content:"_"; animation:cursor-blink 1s steps(1) infinite; }
 
-/* ============ FULL-BLEED SCROLL-ZOOM INTRO ============ */
+/* scroll zoom intro */
 .hero-pin{ position:relative; height:280vh; }
 .hero-sticky{
   position:sticky; top:0; height:100vh; width:100%;
@@ -537,7 +537,7 @@ footer{ text-align:center; padding:34px 24px; font-family:'Space Mono'; font-siz
 .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
 .reveal.in{ opacity:1; transform:none; }
 
-/* ================= Y2K / ARCADE LAYER ================= */
+/* layers pixely */
 .crt-vignette{
   position:fixed; inset:0; z-index:249; pointer-events:none;
   background:radial-gradient(ellipse at center, transparent 55%, rgba(20,10,30,.25) 100%);
@@ -586,7 +586,7 @@ section.tint .section-head{ background:var(--card); border:3px solid var(--ink);
 [data-theme="dark"] section.tint .section-head{ border-color:#f4ecff; }
 [data-theme="boring"] section.tint .section-head{ background:none; border:none; box-shadow:none; padding:0; }
 
-/* marquee ticker */
+/* top banner */
 .marquee-wrap{
   background:var(--ink); border-top:3px solid var(--purple); border-bottom:3px solid var(--purple);
   overflow:hidden; white-space:nowrap; padding:9px 0;
@@ -633,7 +633,7 @@ section.tint .section-head{ background:var(--card); border:3px solid var(--ink);
   100%{ clip-path:inset(55% 0 25% 0); transform:translate(3px,-1px);}
 }
 
-/*  desktop widget*/
+/*  widget look */
 .win98-widget{
   background:#d8d8e8; border:3px solid var(--ink); border-radius:6px;
   box-shadow:
