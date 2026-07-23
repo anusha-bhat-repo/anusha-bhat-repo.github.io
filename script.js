@@ -165,6 +165,7 @@ function setLanguage(newLang){
   renderAwards();
   renderProjects();
   drawRadar();
+  renderMarquees();
 }
 
 langToggle.addEventListener('click', () => {
@@ -386,7 +387,40 @@ function drawRadar(){
     </svg>
   `;
 }
-
+const marqueeTopItems = [
+  { en: 'PYTHON', de: 'PYTHON' },
+  { en: 'C++', de: 'C++' },
+  { en: 'JAVA', de: 'JAVA' },
+  { en: 'REACT NATIVE', de: 'REACT NATIVE' },
+  { en: 'SALESFORCE AGENTFORCE', de: 'SALESFORCE AGENTFORCE' },
+  { en: 'AWS', de: 'AWS' },
+  { en: 'AZURE', de: 'AZURE' },
+  { en: 'PHP', de: 'PHP' },
+  { en: 'MYSQL', de: 'MYSQL' },
+  { en: 'DOCKER', de: 'DOCKER' },
+  { en: 'UIPATH RPA', de: 'UIPATH RPA' },
+  { en: 'POWER BI', de: 'POWER BI' },
+  { en: 'GRAPH THEORY', de: 'GRAPHENTHEORIE' },
+];
+const marqueeBottomItems = [
+  { en: 'DUISBURG-ESSEN', de: 'DUISBURG-ESSEN' },
+  { en: 'SIEMENS ENERGY', de: 'SIEMENS ENERGY' },
+  { en: 'DEUTSCHLANDSTIPENDIUM', de: 'DEUTSCHLANDSTIPENDIUM' },
+  { en: 'HACKATHON FINALIST x5', de: 'HACKATHON-FINALISTIN x5' },
+  { en: 'LOVE DESIGNING', de: 'LIEBE FÜRS DESIGNEN' },
+  { en: 'ALREADY REDESIGNING THIS PORTFOLIO', de: 'ÜBERARBEITE DIESES PORTFOLIO SCHON WIEDER' },
+  { en: 'VERSION #8 IN TWO MONTHS', de: 'VERSION #8 IN ZWEI MONATEN' },
+];
+const marqueeTopTrack = document.getElementById('marqueeTop');
+const marqueeBottomTrack = document.getElementById('marqueeBottom');
+function renderMarquee(track, items, sep){
+  const row = items.map(i => `<span>${sep}</span>${i[lang]}`).join('') + `<span>${sep}</span>`;
+  track.innerHTML = row + row;
+}
+function renderMarquees(){
+  renderMarquee(marqueeTopTrack, marqueeTopItems, '★');
+  renderMarquee(marqueeBottomTrack, marqueeBottomItems, '♥');
+}
 const certs = [
   'Salesforce · Agentforce', 'Salesforce · Flow Builder', 'Microsoft · Power BI',
   'Microsoft · Fabric', 'UiPath · RPA', 'DataCamp · Generative AI', 'HubSpot · Inbound Marketing'
@@ -551,6 +585,7 @@ renderCerts();
 renderAwards();
 renderProjects();
 drawRadar();
+renderMarquees();
 
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
